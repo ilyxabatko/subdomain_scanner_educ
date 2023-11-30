@@ -1,0 +1,14 @@
+[package]
+name = "subdomain_scanner"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.75"
+thiserror = "1.0.50"
+rayon = "1.5"
+trust-dns-resolver = "0.23.2"
+reqwest = { version = "0.11.22", default-features = false, features = ["json", "blocking", "rustls-tls"] }
+serde = { version = "1", features = ["derive"] }
